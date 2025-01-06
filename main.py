@@ -27,7 +27,8 @@ def lcd_init():
     pins.spi_write(0x00)
     pins.analog_set_period(LCD_BLK, 20)
     # LCD_SPI_Init
-    pins.spi_frequency(1000000)
+    #pins.spi_frequency(1000000)
+    pins.spi_frequency(40000000)
     pins.spi_format(8, 0)
     set_cs(1)
     pins.digital_write_pin(LCD_RST, 1)

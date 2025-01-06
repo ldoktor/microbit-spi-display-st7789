@@ -32,7 +32,8 @@ function lcd_init() {
     pins.spiWrite(0x00)
     pins.analogSetPeriod(LCD_BLK, 20)
     //  LCD_SPI_Init
-    pins.spiFrequency(1000000)
+    // pins.spi_frequency(1000000)
+    pins.spiFrequency(40000000)
     pins.spiFormat(8, 0)
     set_cs(1)
     pins.digitalWritePin(LCD_RST, 1)
